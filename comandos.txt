@@ -1,0 +1,14 @@
+#ativar virtual env (dentro do diretório onde está configurada)
+source activate
+
+#Criar novo projeto Django
+django-admin startproject {nome do projeto}
+
+#Criar nova aplicação dentro do projeto Django
+django-admin startapp {nome do app}
+
+#Criar tabelas iniciais
+python manage.py migrate
+
+#Criar usuário admin
+python manage.py createsuperuser --username admin
