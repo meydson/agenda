@@ -12,3 +12,17 @@ python manage.py migrate
 
 #Criar usuário admin
 python manage.py createsuperuser --username admin
+
+#Criar as tabelas do Models para o banco
+python manage.py makemigrations {nome do app que quer criar as tabelas}
+python manage.py sqlmigrate {nome do app} {arquivo migrations específico}
+python manage.py migrate {nome do app} {arquivo migrations específico}
+
+#Para definir manualmente o nome da tabela
+class Meta:
+    db_table = 'nome da tabela'
+
+#Atualizar tabela
+python manage.py makemigrations {nome do app que quer criar as tabelas}
+python manage.py sqlmigrate {nome do app} {arquivo migrations específico}
+python manage.py migrate {nome do app} {arquivo migrations específico}
